@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script><title>ICT 10</title>
+    <style>
+        body{text-align: center;}
+        h1{color: rgb(4, 50, 136);}
+        #output1{border: 5px solid rgb(17, 20, 193);box-shadow: 0px 5px 5px rgb(200, 200, 200); height: 500px;border-radius: 10px;font-size: 20px;}
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <h1>Non-Metal Elements</h1>
+        <p>Please Enter Element Symbol</p>
+        <input type="text" id='nonmets' placeholder="E.G: Br, Xe, Ag">
+        <br>
+        <button py-click="locate_element">Find Element</button>
+        
+        <div class="result"></div>
+            <h3>Present Database</h3>
+            <p><b>Symbol:</b><span id="data_symbol"></span></p>
+            <p><b>Proper Name:</b><span id="data_name"></span></p>
+            <p><b>Atomic Number:</b><span id="data_number"></span></p>
+            <p><b>Atomic Weight:</b><span id="data_weight"></span></p>
+    <script type="py" src="main.py"></script>
+
+    </div>
+</body>
+</html>
