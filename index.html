@@ -8,37 +8,61 @@
     <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
     <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script><title>ICT 10</title>
     <style>
-        body{
-        text-align: center;
+        body {
+            text-align: center;
+            background-image: url('https://www.animationsoftware7.com/img/agifs/fire01.gif');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        h1{
-        color: rgb(4, 50, 136);
+        h1 {
+            color: rgb(4, 50, 136);
         }
-        result{
-        border: 5px solid rgb(17, 20, 193);
-        box-shadow: 0px 5px 5px rgb(200, 200, 200);
-        height: 500px;border-radius: 10px;font-size: 20px;
+
+        #form-container {
+            width: min(100%, 560px);
+            border: 5px solid rgb(17, 20, 193);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            font-size: 20px;
+        }
+
+        .info-box {
+            text-align: left;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 2px solid rgba(17, 20, 193, 0.2);
         }
     </style>
 </head>
 <body>
-    <div class = "container">
-        <h1>Non-Metal Elements</h1>
-        <p>Please Enter Element Name</p>
-        <input type="text" id='nonmets' placeholder="E.G: Xenon, Argon">
-        <br>
-        <button py-click="locate_element">Find Element</button>
-        
-        <div class="result"></div>
-        <br>
-            <h3>Information Database</h3>
-            <p><b>Symbol:</b><span id="data_symbol"></span></p>
-            <p><b>Proper Name:</b><span id="data_name"></span></p>
-            <p><b>Atomic Number:</b><span id="data_number"></span></p>
-            <p><b>Atomic Weight:</b><span id="data_weight"></span></p>
-    <script type="py" src="main.py"></script>
+    <div class="container d-flex justify-content-center">
+        <div id="form-container">
+            <h1>Non-Metal Elements</h1>
+            <form class="text-start">
+              <label for="nonmets" class="form-label fw-bold">Please Enter Element Name</label>
+              <input type="text" id="nonmets" class="form-control mb-3" placeholder="E.G: Xenon, Argon">
+                <button type="button" class="btn btn-primary w-100" py-click="locate_element">Find Element</button>
+            </form>
 
+            <div class="result mt-3"></div>
+
+            <div class="info-box">
+                <h3>Information Database</h3>
+                <p><b>Symbol:</b> <span id="data_symbol"></span></p>
+                <p><b>Proper Name:</b> <span id="data_name"></span></p>
+                <p><b>Atomic Number:</b> <span id="data_number"></span></p>
+                <p><b>Atomic Weight:</b> <span id="data_weight"></span></p>
+            </div>
+        </div>
     </div>
+
+    <script type="py" src="main.py"></script>
 </body>
 </html>
